@@ -10,3 +10,22 @@ body {
     background-color: #B59CA5;
     color: #2E2528;
 }
+/* Título */
+
+h1 {
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: #6B3FA0;
+}
+
+/* Texto */
+
+p {
+    transition: color 0.3s ease;
+}
+
+p:hover {
+    color: #6B3FA0;
+}
