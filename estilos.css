@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-color: #B59CA5;
+    color: #2E2528;
+}
