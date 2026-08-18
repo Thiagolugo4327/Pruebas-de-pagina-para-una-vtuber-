@@ -351,3 +351,24 @@ a:hover {
     }
 
 }
+.musica {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.musica button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.35);
+    color: #2E2528;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.musica button:hover {
+    background: #6B3FA0;
+    color: white;
+    transform: translateY(-3px);
+}
