@@ -57,3 +57,39 @@ a {
 a:hover {
     color: #6B3FA0;
 }
+.presentacion {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.tarjeta {
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    background-color: #D8C8CE;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px #6B3FA0;
+}
+
+.tarjeta img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.tarjeta h2 {
+    color: #2E2528;
+    transition: 0.3s;
+}
+
+.tarjeta:hover h2 {
+    color: #6B3FA0;
+}
