@@ -372,3 +372,25 @@ a:hover {
     color: white;
     transform: translateY(-3px);
 }
+.spotify-card {
+    width: 90%;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(40, 25, 45, 0.9);
+    border: 2px solid #8e6aa8;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.spotify-card h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.spotify-card iframe {
+    border-radius: 12px;
+    display: block;
+}
