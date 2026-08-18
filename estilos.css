@@ -1,27 +1,50 @@
 @charset "UTF-8";
-/* Body */
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
     margin: 0;
-    display: flex;
-    justify-content: center;
+    padding: 30px 15px;
 
-    background: linear-gradient(-45deg,
+    background: linear-gradient(
+        -45deg,
         #B59CA5,
         #8E6A7A,
         #D7C4CB,
-        #6B4A5A);
+        #6B4A5A
+    );
 
     background-size: 400% 400%;
     animation: fondo 15s ease infinite;
 
     color: #2E2528;
 }
-/* Título */
+
+/* Contenedor principal */
+
+body > div {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
 
 h1 {
+    text-align: center;
+    font-size: 42px;
+    margin: 20px auto 15px;
     transition: color 0.3s ease;
 }
 
@@ -29,7 +52,10 @@ h1:hover {
     color: #6B3FA0;
 }
 
-/* Texto */
+
+/* =========================
+   TEXTO
+========================= */
 
 p {
     transition: color 0.3s ease;
@@ -38,61 +64,95 @@ p {
 p:hover {
     color: #6B3FA0;
 }
-/* Texto */
 
-p {
-    transition: color 0.3s ease;
-}
 
-p:hover {
-    color: #6B3FA0;
-}
+/* =========================
+   LINKS
+========================= */
 
 ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
+    margin: 25px auto;
+    text-align: center;
 }
 
 li {
-    margin: 10px 0;
+    display: inline-block;
+    margin: 5px;
 }
 
 a {
+    display: inline-block;
+    padding: 10px 15px;
+
     color: #2E2528;
     text-decoration: none;
-    transition: color 0.3s ease;
+
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+
+    transition: 0.3s;
 }
 
 a:hover {
-    color: #6B3FA0;
+    color: white;
+    background: #6B3FA0;
+    transform: translateY(-3px);
 }
+
+
+/* =========================
+   PRESENTACIÓN
+========================= */
+
 .presentacion {
     display: flex;
     justify-content: center;
+    align-items: stretch;
     gap: 30px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
+
+/* Tarjetas */
+
 .tarjeta {
-    width: 300px;
-    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    padding: 25px;
+
     text-align: center;
-    background-color: #D8C8CE;
-    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px);
+
+    border-radius: 20px;
+
     transition: 0.3s;
 }
 
 .tarjeta:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px #6B3FA0;
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(107, 63, 160, 0.5);
 }
 
+
+/* Imágenes */
+
 .tarjeta img {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
+
     object-fit: cover;
     border-radius: 50%;
+
+    display: block;
+    margin: 15px auto;
 }
+
+
+/* Nombre */
 
 .tarjeta h2 {
     color: #2E2528;
@@ -102,40 +162,179 @@ a:hover {
 .tarjeta:hover h2 {
     color: #6B3FA0;
 }
-/* Adaptación para celulares */
+
+
+/* =========================
+   HORARIOS
+========================= */
+
+.horarios {
+    width: 100%;
+    max-width: 750px;
+
+    margin: 50px auto 0;
+
+    text-align: center;
+}
+
+.horarios h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.semana {
+    padding: 20px;
+    margin: 15px 0;
+
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.semana:hover {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.nota {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+
+/* =========================
+   INFORMACIÓN
+========================= */
+
+.informacion {
+    width: 100%;
+    max-width: 800px;
+
+    margin: 50px auto;
+    padding: 30px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+
+    border-radius: 20px;
+}
+
+.informacion h2 {
+    color: #6B3FA0;
+    font-size: 28px;
+}
+
+.informacion h3 {
+    margin-top: 25px;
+}
+
+.informacion p {
+    line-height: 1.6;
+}
+
+.respeto {
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+
+/* =========================
+   FONDO ANIMADO
+========================= */
+
+@keyframes fondo {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* =========================
+   CELULARES
+========================= */
+
 @media (max-width: 700px) {
 
     body {
-        width: 100%;
-        min-height: 100vh;
-        padding: 15px;
-        box-sizing: border-box;
-        overflow-x: hidden;
+        padding: 20px 12px;
     }
+
+    h1 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+
+    /* Links */
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    li {
+        margin: 0;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    a {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* Tarjetas */
 
     .presentacion {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 25px;
     }
 
     .tarjeta {
-        width: 100%;
-        max-width: 320px;
-        box-sizing: border-box;
+        max-width: 350px;
+        padding: 20px;
     }
 
     .tarjeta img {
-        width: 120px;
-        height: 120px;
+        width: 130px;
+        height: 130px;
     }
 
+
+    /* Horarios */
+
+    .horarios {
+        margin-top: 40px;
+    }
+
+    .horarios h2 {
+        font-size: 27px;
+    }
+
+
+    /* Información */
+
     .informacion {
-        width: 100%;
-        max-width: 500px;
-        box-sizing: border-box;
         padding: 20px;
-        margin: 30px auto;
+        margin-top: 40px;
     }
 
     .informacion h2 {
@@ -151,79 +350,4 @@ a:hover {
         line-height: 1.5;
     }
 
-    .horarios {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .horarios h2 {
-        font-size: 26px;
-    }
-
-}
-
-@keyframes fondo {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-.horarios {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.horarios h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.semana {
-    background: rgba(255,255,255,0.25);
-    backdrop-filter: blur(8px);
-    border-radius: 15px;
-    padding: 15px;
-    margin: 15px 0;
-    transition: 0.3s;
-}
-
-.semana:hover {
-    transform: scale(1.03);
-    background: rgba(255,255,255,0.35);
-}
-
-.nota {
-    margin-top: 15px;
-    font-style: italic;
-}
-.informacion {
-    max-width: 700px;
-    margin: 40px auto;
-    padding: 25px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(8px);
-    border-radius: 20px;
-}
-
-.informacion h2 {
-    color: #6B3FA0;
-}
-
-.informacion h3 {
-    margin-top: 25px;
-}
-
-.informacion p {
-    line-height: 1.6;
-}
-
-.respeto {
-    font-weight: bold;
-    margin-top: 25px;
 }
