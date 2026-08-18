@@ -1,13 +1,22 @@
 @charset "UTF-8";
 /* Body */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
-    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
     display: flex;
     justify-content: center;
-    background-size: cover;
-    background-color: #B59CA5;
+
+    background: linear-gradient(-45deg,
+        #B59CA5,
+        #8E6A7A,
+        #D7C4CB,
+        #6B4A5A);
+
+    background-size: 400% 400%;
+    animation: fondo 15s ease infinite;
+
     color: #2E2528;
 }
 /* Título */
@@ -133,4 +142,43 @@ a:hover {
         padding: 0;
         text-align: center;
     }
+}
+@keyframes fondo {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.horarios {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.horarios h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.semana {
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 15px 0;
+    transition: 0.3s;
+}
+
+.semana:hover {
+    transform: scale(1.03);
+    background: rgba(255,255,255,0.35);
+}
+
+.nota {
+    margin-top: 15px;
+    font-style: italic;
 }
