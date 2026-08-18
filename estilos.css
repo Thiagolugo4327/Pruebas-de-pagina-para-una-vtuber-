@@ -29,3 +29,31 @@ p {
 p:hover {
     color: #6B3FA0;
 }
+/* Texto */
+
+p {
+    transition: color 0.3s ease;
+}
+
+p:hover {
+    color: #6B3FA0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    color: #2E2528;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #6B3FA0;
+}
