@@ -182,3 +182,29 @@ a:hover {
     margin-top: 15px;
     font-style: italic;
 }
+.informacion {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 25px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+}
+
+.informacion h2 {
+    color: #6B3FA0;
+}
+
+.informacion h3 {
+    margin-top: 25px;
+}
+
+.informacion p {
+    line-height: 1.6;
+}
+
+.respeto {
+    font-weight: bold;
+    margin-top: 25px;
+}
