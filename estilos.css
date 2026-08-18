@@ -93,3 +93,44 @@ a:hover {
 .tarjeta:hover h2 {
     color: #6B3FA0;
 }
+/* Adaptación para celulares */
+
+@media (max-width: 700px) {
+
+    body {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .presentacion {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .tarjeta {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .tarjeta img {
+        width: 160px;
+        height: 160px;
+    }
+
+    ul {
+        padding: 0;
+        text-align: center;
+    }
+}
