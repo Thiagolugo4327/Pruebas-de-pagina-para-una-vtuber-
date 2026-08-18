@@ -103,23 +103,14 @@ a:hover {
     color: #6B3FA0;
 }
 /* Adaptación para celulares */
-
 @media (max-width: 700px) {
 
     body {
         width: 100%;
-        padding: 20px;
+        min-height: 100vh;
+        padding: 15px;
         box-sizing: border-box;
-    }
-
-    h1 {
-        font-size: 28px;
-        text-align: center;
-    }
-
-    p {
-        font-size: 16px;
-        line-height: 1.5;
+        overflow-x: hidden;
     }
 
     .presentacion {
@@ -129,20 +120,48 @@ a:hover {
     }
 
     .tarjeta {
-        width: 90%;
-        max-width: 300px;
+        width: 100%;
+        max-width: 320px;
+        box-sizing: border-box;
     }
 
     .tarjeta img {
-        width: 110px;
-        height: 110px;
+        width: 120px;
+        height: 120px;
     }
 
-    ul {
-        padding: 0;
-        text-align: center;
+    .informacion {
+        width: 100%;
+        max-width: 500px;
+        box-sizing: border-box;
+        padding: 20px;
+        margin: 30px auto;
     }
+
+    .informacion h2 {
+        font-size: 24px;
+    }
+
+    .informacion h3 {
+        font-size: 19px;
+    }
+
+    .informacion p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .horarios {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .horarios h2 {
+        font-size: 26px;
+    }
+
 }
+
 @keyframes fondo {
     0% {
         background-position: 0% 50%;
