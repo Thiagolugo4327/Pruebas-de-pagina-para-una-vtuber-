@@ -300,6 +300,18 @@ a:hover {
         width: 100%;
         text-align: center;
     }
+   a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #2E2528;
+    text-decoration: none;
+}
+
+a,
+button {
+    cursor: url("cursor-morado.png"), pointer;
+}
+
 
 
     /* Tarjetas */
