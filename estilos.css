@@ -34,6 +34,8 @@ body > div {
     width: 100%;
     max-width: 1100px;
     margin: auto;
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -393,4 +395,156 @@ a:hover {
 .spotify-card iframe {
     border-radius: 12px;
     display: block;
+}
+/* =========================
+   ANIMACIONES DE ENTRADA
+========================= */
+
+h1 {
+    animation: aparecerArriba 1s ease-out;
+}
+
+body > div > p {
+    animation: aparecer 1.2s ease-out;
+}
+
+body > div > ul {
+    animation: aparecer 1.4s ease-out;
+}
+
+.presentacion {
+    animation: aparecerAbajo 1.5s ease-out;
+}
+
+.horarios {
+    animation: aparecerAbajo 1.8s ease-out;
+}
+
+.informacion {
+    animation: aparecerAbajo 2.1s ease-out;
+}
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes aparecerArriba {
+
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes aparecerAbajo {
+
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Efecto de las imágenes */
+
+.tarjeta img {
+    transition: 0.4s ease;
+}
+
+.tarjeta:hover img {
+    transform: scale(1.08) rotate(3deg);
+}
+.boton-trans {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.boton-trans button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.35);
+    color: #2E2528;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.boton-trans button:hover {
+    background: #6B3FA0;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+/* Banderas */
+
+.bandera-trans {
+    position: fixed;
+    bottom: -50px;
+
+    font-size: 30px;
+
+    z-index: 10;
+    pointer-events: none;
+
+    animation: banderaSube linear forwards;
+}
+
+@keyframes banderaSube {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-50vh) rotate(180deg);
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
 }
