@@ -548,3 +548,13 @@ body > div > ul {
         opacity: 0;
     }
 }
+/* Cursor personalizado */
+
+body {
+    cursor: url("cursor-morado.png"), auto;
+}
+
+a,
+button {
+    cursor: url("cursor-morado.png"), pointer;
+}
